@@ -1,0 +1,90 @@
+header {
+    background-color: transparent;
+    position: absolute;
+    width: calc(100% - 16rem);
+    padding: 2rem 8rem;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Alata, sans-serif;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+}
+    header img:nth-child(2) {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+    }
+        header nav img {
+            display: none;
+        }
+        header nav div {
+            position: relative;
+            padding: 1rem;
+        }
+        header nav div::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+            background-color: white;
+            width: 30%;
+            height: 0.1rem;
+            display: none;
+        }
+            header nav div:hover{
+                cursor: pointer;
+            }
+
+            header nav div:hover::after {
+                display: block;
+            }
+
+@media screen and (max-aspect-ratio: 1) {
+    header {
+        width: calc(100% - 4rem);
+        padding: 2rem;
+    }
+    header img:nth-child(1) {
+        position: relative;
+        z-index: 1;
+    }
+    header img:nth-child(2) {
+        display: block;
+    }
+    header nav {
+        position: fixed;
+        display: block;
+        opacity: 0;
+        width: calc(100% + 1px);
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        background-color: black;
+        transition: 1s;
+        padding-top: 50%;
+    }
+        header nav img {
+            position: absolute !important;
+            top: 2rem;
+            right: 2rem;
+            display: block;
+            transform: translate(0, 50%);
+        }
+        header nav div {
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+            padding-left: 2rem;
+            font-size: 1.5rem;
+        }
+        header nav div::after {
+            display: none !important;
+        }
+}
