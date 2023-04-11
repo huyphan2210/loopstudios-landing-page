@@ -1,0 +1,42 @@
+#hero {
+    position: relative;
+    height: 80vh;
+    background-image: url(../../assets/images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+    #hero hgroup {
+        position: absolute;
+        min-width: 30%;
+        max-width: 40%;
+        padding: 2rem;
+        border: 0.1rem solid white;
+        color: white;
+        left: 8rem;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+        #hero hgroup h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+            font-size: 4rem;
+            margin-block: 0;
+            font-weight: 100;
+        }
+
+@media screen and (max-aspect-ratio: 1) {
+    #hero {
+        background-image: url(../../assets//images/mobile/image-hero.jpg);
+        padding-left: 2rem;
+    }
+
+    #hero hgroup {
+        left: 2rem;
+        max-width: calc(100% - 8rem);
+    }
+        #hero hgroup h1 {
+            font-size: 2.5rem;
+        }
+}
