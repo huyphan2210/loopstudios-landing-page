@@ -1,3 +1,115 @@
-#challenger {
-    text-align: center;
+footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 2vw 10vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+    #foot {
+        display: flex;
+        justify-content: space-between;
+    }
+        #navigation nav {
+            display: flex;
+            margin-block-start: 1rem;
+        }
+            #navigation nav div {
+                position: relative;
+                padding: 1rem;
+                cursor: pointer;
+            }
+            #navigation nav div:first-child {
+                padding-left: 0;
+            }
+            #navigation nav div:hover::after {
+                display: block;
+            }
+
+            #navigation nav div::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%);
+                background-color: white;
+                width: 30%;
+                height: 0.1rem;
+                display: none;
+            }
+        
+        #contact {
+            text-align: end;
+        }
+            #social-medias {
+                display: flex;
+                justify-content: end;
+            }
+                #social-medias div {
+                    position: relative;
+                    cursor: pointer;
+                    margin-left: 1rem;
+                }
+                    #social-medias div::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 110%;
+                        transform: translate(-50%);
+                        background-color: white;
+                        width: 100%;
+                        height: 0.1rem;
+                        color: white;
+                        display: none;
+                    }
+                    #social-medias div:hover::after {
+                        display: block;
+                    }
+            #contact p {
+                margin-block-start: 2.5rem;
+                color: var(--very-dark-gray)
+            }
+
+    #challenger {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        bottom: 1vh;
+        transform: translate(-50%);
+    }
+
+@media screen and (max-aspect-ratio: 1) {
+    footer {
+        padding: 4rem 2rem;
+    }
+        #foot {
+            flex-direction: column;
+            text-align: center;
+        }
+            #navigation nav {
+                flex-direction: column;
+            }
+            #navigation nav div:first-child {
+                padding-left: 1rem;
+            }
+
+        #contact {
+            margin-block-start: 2rem;
+            text-align: center;
+        }
+            #social-medias {
+                justify-content: center;
+            }
+                #social-medias div {
+                    margin-right: 1rem;
+                }
+                #contact p {
+                    margin-block-start: 1rem;
+                }
+
+        #challenger {
+            margin-block-start: 2rem;
+            position: static;
+            transform: none;
+        }
 }
