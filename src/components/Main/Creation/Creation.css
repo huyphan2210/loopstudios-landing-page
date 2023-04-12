@@ -1,0 +1,48 @@
+.creation {
+    position: relative;
+    
+}
+    .creation:hover {
+        cursor: pointer;
+    }
+        .creation:hover h1 {
+            color: black;
+        }
+        .creation:hover img {
+            opacity: 0.5;
+        }
+    .creation img:nth-child(1) {
+        width: 100%;
+    }
+
+    .creation img:nth-child(2) {
+        display: none;
+    }
+
+    .creation h1 {
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+        text-transform: uppercase;
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
+        margin-block: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 100;
+        color: white;
+        width: calc(100% - 4rem);
+    }
+
+@media screen and (max-aspect-ratio: 1) {
+    .creation img:nth-child(1) {
+        display: none;
+    }
+    .creation img:nth-child(2) {
+        display: block;
+        width: 100%;
+    }
+    .creation h1 {
+        left: 1rem;
+        bottom: 1rem;
+        width: calc(50% - 2rem);
+    }
+}
