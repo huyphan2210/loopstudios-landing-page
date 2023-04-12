@@ -1,8 +1,8 @@
 header {
     background-color: transparent;
     position: absolute;
-    width: calc(100% - 16rem);
-    padding: 2rem 8rem;
+    width: calc(100% - 20vw);
+    padding: 2vw 10vw;
     left: 50%;
     top: 0;
     transform: translate(-50%);
