@@ -6,6 +6,10 @@ import interactive from '../../assets/images/desktop/image-interactive.jpg';
 // Mobile imgs
 import interactiveMobile from '../../assets/images/mobile/image-interactive.jpg';
 
+import creations from '../../data';
+
+import Creation from './Creation/Creation';
+
 function Main() {
     return (
         <main>
@@ -27,6 +31,16 @@ function Main() {
                             to their brand.
                         </p>
                     </hgroup>
+                </section>
+                <section id='our-creations'>
+                    <div id='title'>
+                        <h1>Our Creations</h1>
+                        <button type='button'>See All</button>
+                    </div>
+                    <div id='creations'>
+                        {creations.map(value => Creation(value))}
+                        <button id='button-mobile' type='button'>See All</button>
+                    </div>
                 </section>
             </section>
         </main>

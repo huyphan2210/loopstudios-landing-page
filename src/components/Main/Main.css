@@ -13,7 +13,7 @@
         padding: 2rem;
         border: 0.1rem solid white;
         color: white;
-        left: 8rem;
+        left: 10vw;
         top: 50%;
         transform: translate(0, -50%);
     }
@@ -60,6 +60,44 @@
                 line-height: 2rem;
                 color: var(--dark-gray);
             }
+    
+    #title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+    }
+        #title h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 4rem;
+            font-weight: 100;
+        }
+        
+        #title button, #button-mobile {
+            font-family: Alata, sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            background-color: transparent;
+            padding: 1rem 2rem;
+            letter-spacing: 0.2rem;
+            border-style: solid;
+            border-color: black;
+        }
+            #title button:hover, #button-mobile:hover {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+
+    #creations {
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        gap: calc(12% / 3);
+    }
+
+    #button-mobile {
+        display: none;
+    }
 
 @media screen and (min-aspect-ratio: 1) and (max-width: 1024px){
     #intro hgroup h1 {
@@ -77,7 +115,7 @@
         max-width: calc(100% - 8rem);
     }
         #hero hgroup h1 {
-            font-size: 2.5rem;
+            font-size: clamp(2.5rem, 2.5vw, 3rem);
         }
     #content {
         padding: 8rem 2rem;
@@ -100,4 +138,25 @@
         #intro hgroup h1 {
             font-size: 2.5rem;
         }
+
+    #title {
+        justify-content: center;
+    }
+        #title button {
+            display: none;
+        }
+        #title h1 {
+            font-size: clamp(2.5rem, 2.5vw, 3rem);
+            text-align: center;
+        }
+    #creations {
+        grid-template-columns: auto;
+        gap: 2rem;
+    }
+    #button-mobile {
+        display: inline;
+        width: 50%;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
 }
